@@ -20,9 +20,20 @@ namespace EjerciciosCSharp
             // 4. El formato de cada línea debe ser: "numero x i = resultado\n"
             // Ejemplo: Si numero = 5, una línea sería: "5 x 1 = 5\n"
             
+    
             string resultado = "";
             
             // TU CÓDIGO AQUÍ
+
+            for (int i = 1; i <= 12; i++)
+    {
+        // PISTA 2: Multiplicar el número por el contador (i)
+        int multiplicacion = numero * i;
+
+        // PISTA 3 y 4: Construir el resultado con el formato específico y salto de línea (\n)
+        // Usamos += para concatenar al string existente
+        resultado += numero + " x " + i + " = " + multiplicacion + "\n";
+    }
             
             return resultado;
         }
@@ -49,7 +60,19 @@ namespace EjerciciosCSharp
             string entrada = "";
             
             // TU CÓDIGO AQUÍ (usa do-while)
-            
+
+do
+    {
+        // Simulamos pedir la entrada llamando a la función que recibimos por parámetro
+        entrada = obtenerInput();
+
+        // PISTA 4: Contar el intento
+        intentos++;
+
+    // PISTA 3: Repetir MIENTRAS la entrada NO sea igual a la clave
+    } while (entrada != claveSecreta);
+
+
             return intentos;
         }
 
@@ -73,6 +96,17 @@ namespace EjerciciosCSharp
             int suma = 0;
             
             // TU CÓDIGO AQUÍ (usa while o foreach con break)
+
+            foreach (int numero in numeros)
+    {
+
+        suma += numero;
+
+        if (numero == 0)
+        {
+            break;
+        }
+    }
             
             return suma;
         }
@@ -96,6 +130,19 @@ namespace EjerciciosCSharp
             string resultado = "";
             
             // TU CÓDIGO AQUÍ (usa for con i+=2)
+
+            for (int i = 0; i <= 50; i += 2)
+    {
+        resultado += i;
+
+    
+        if (i < 50)
+        {
+            resultado += ", ";
+        }
+    }
+
+    return resultado;
             
             return resultado;
         }
